@@ -2,28 +2,29 @@
 html
 	include includes/head
 	body
-		ubi = "contacto"
-		include includes/header
-		section
-			#contacto
-				h1 Contacto
-				p.
-					Para nosotros es muy importante tu opinión,
-					Por lo mismo nos ponemos a tus ordenes para
-					resolver cualquier tipo de duda o aclaración,
-					o cualquier tipo de comentario al respecto.
-				form
-					.row
-						label(for="nombre") Nombre:
-						input(type="text",name="nombre")
-					.row
-						label(for="mail") E-mail:
-						input(type="text",name="mail")
-					.row
-						label(for="telefono") Teléfono:
-						input(type="text",name="telefono")
-					.row
-						label(for="mensaje") Mensaje:
-						textarea(name="mensaje")
-					input(type="submit", value="Enviar").enviar
-		include includes/footer
+		#wrapper
+			ubi = "contacto"
+			include includes/header
+			section
+				#contacto
+					h1 Contacto
+					p.
+						Para nosotros es muy importante tu opinión,
+						Por lo mismo nos ponemos a tus ordenes para
+						resolver cualquier tipo de duda o aclaración,
+						o cualquier tipo de comentario al respecto.
+					form
+						.row
+							label(for="nombre") Nombre:
+							input(type="text",name="nombre")
+						.row
+							label(for="mail") E-mail:
+							input(type="text",name="mail")
+						.row
+							label(for="telefono") Teléfono:
+							input(type="text",name="telefono")
+						.row
+							label(for="mensaje") Mensaje:
+							textarea(name="mensaje")
+						input(type="submit", value="Enviar").enviar
+			include includes/footer

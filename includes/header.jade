@@ -1,0 +1,75 @@
+header
+	.container
+		a#logo(href='index.html')
+			img(src='img/logo-good-house.png')
+		#filtro
+			a(href='#').active compra
+			a(href='#') renta
+			div
+				div
+					span#anyselector Zona de inmueble
+					#zona
+						ul
+							- for (var j = 1; j <= 10; ++j) {
+							li Zona #{j}
+							- }
+				div
+					span#tiposelector Tipo de inmueble
+					#tipo
+						ul
+							- for (var j = 1; j <= 10; ++j) {
+							li Tipo #{j}
+							- }
+				button
+					i.icon-search
+		#socialmedia
+				a(href='#')
+					i.icon-linkedin
+				a(href='#')
+					i.icon-tumblr
+		nav
+			ul
+				li
+					- if (ubi == "desarrollos")
+						a(href='#').active desarrollos
+					- else
+						a(href='#') desarrollos						
+					ul
+						li
+							a(href='desarrollos.html') Los Olivos
+						li
+							a(href='desarrollos.html') Periférico
+						li
+							a(href='desarrollos.html') Convento
+						li
+							a(href='desarrollos.html') Ermita
+				li
+					- if (ubi == "corretaje")
+						a(href='#').active corretaje
+					- else
+						a(href='#') corretaje
+					ul
+						li
+							a(href='compra-renta1.html') Compra
+						li
+							a(href='compra-renta1.html') Venta
+						li
+							a(href='#') Construcción
+				li
+					a(href='#') somos
+				li
+					a(href='#') amigos
+				li
+					- if (ubi == "contacto")
+						a(href='#').active contacto
+					- else
+						a(href='contacto.html') contacto
+					ul
+						li
+							a(href='nuestras-oficinas.html') Nuestras oficinas
+						li
+							a(href='#') ¿Buscas inmueble?
+						li
+							a(href='#') ¿Ofreces inmueble?
+						li
+							a(href='#') ¿Eres opcionador?

@@ -1,0 +1,39 @@
+nav > ul > li > ul {
+  top: 40px;
+  left: 20px;
+}
+
+header > div.container > div#filtro > div {
+  height: 20px;
+}
+header > div.container > div#filtro > div > div > div#zona, header > div.container > div#filtro > div > div > div#tipo {
+  overflow: hidden;
+  height: 100px;
+  position: relative;
+}
+header > div.container > div#filtro > div > div > div#zona > ul, header > div.container > div#filtro > div > div > div#tipo > ul {
+  width: 190px;
+  float: none;
+}
+header > div.container > div#filtro > div > div > div#zona > ul > li, header > div.container > div#filtro > div > div > div#tipo > ul > li {
+  width: 180px;
+}
+
+#scrollinterno article a:hover > span {
+  display: block;
+}
+#scrollinterno article a > span {
+  display: none;
+  bottom: 30px;
+}
+
+section #contacto form .row input {
+  width: 390px;
+}
+section #contacto form .row textarea {
+  width: 379px;
+}
+
+div.contenedor section#nuestrasOficinas article {
+  width: 220px;
+}

@@ -1,0 +1,41 @@
+!!! 5
+html
+	include includes/head
+	
+	body
+		ubi = "corretaje"
+		include includes/header
+		section#listado
+			h1 Compra
+			#ordenacion
+				div
+					span#ordenSeleccionado Ordenar:
+					#ordenOp
+						ul
+							- for (var j = 1; j <= 10; ++j) {
+							li Ordenar #{j}						
+							- }
+				.deshabilitado
+					span#criterioSeleccionado Criterio:
+					#criterioOp
+						ul
+							- for (var j = 1; j <= 10; ++j) {
+							li Criterio #{j}						
+							- }
+			#scrollinterno
+				- for (var j = 1; j <= 5; ++j) {
+				article
+					a(href='compra-renta.html')
+						img(src="http://placehold.it/185x132", alt="placeholder")
+						span ver mas detalles
+					.texto
+						h2 Coyoacán
+						p RENTA: $22,500.00 por toda la propiedad
+						ul
+							li Propiedad con 2 casas independientes
+							li Puede ser rentada para Escuela de Artes (música, baile, etc.)
+							li Estacionamiento separado para 2 automóviles
+							li Jardín anexo y patio detrás de la propiedad
+				- }
+				
+		include includes/footer

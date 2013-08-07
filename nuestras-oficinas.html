@@ -1,1 +1,158 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>good-haus</title><meta name="description" content=""><meta name="viewport" content="width=device-width"><link rel="stylesheet" href="css/styles.css"><!--[if lt IE 8]><link rel="stylesheet" href="css/styles-ie7.css"><script src="js/lte-ie7.js"></script><![endif]--><script src="js/jquery-1.8.3.min.js"></script><script src="js/jquery.nicescroll.min.js"></script><script type="text/javascript" src="js/jcarousellite_1.0.1.min.js"></script><script src="js/jquery.validate.min.js"></script><script type="text/javascript" src="js/jcarousellite_1.0.1.min.js"></script><script type="text/javascript" src="js/all.js"></script><script src="js/scripts.js"></script><!-- only IE --><!--[if lt IE 9]><script src="js/html5shiv.js"></script><script src="js/jquery-extra-selectors.js"></script><script src="js/selectivizr-min.js"></script><![endif]--></head><body><header><div class="container"><a id="logo" href="index.html"><img src="img/logo-good-house.png"></a><div id="filtro"><a href="#" class="active">compra</a><a href="#">renta</a><div><div><span id="anyselector">Zona de inmueble</span><div id="zona"><ul><li>Zona 1</li><li>Zona 2</li><li>Zona 3</li><li>Zona 4</li><li>Zona 5</li><li>Zona 6</li><li>Zona 7</li><li>Zona 8</li><li>Zona 9</li><li>Zona 10</li></ul></div></div><div><span id="tiposelector">Tipo de inmueble</span><div id="tipo"><ul><li>Tipo 1</li><li>Tipo 2</li><li>Tipo 3</li><li>Tipo 4</li><li>Tipo 5</li><li>Tipo 6</li><li>Tipo 7</li><li>Tipo 8</li><li>Tipo 9</li><li>Tipo 10</li></ul></div></div><button><i class="icon-search"></i></button></div></div><div id="socialmedia"><a href="#"><i class="icon-linkedin"></i></a><a href="#"><i class="icon-tumblr"></i></a></div><nav><ul><li><a href="#">desarrollos						</a><ul><li><a href="desarrollos.html">Los Olivos</a></li><li><a href="desarrollos.html">Periférico</a></li><li><a href="desarrollos.html">Convento</a></li><li><a href="desarrollos.html">Ermita</a></li></ul></li><li><a href="#">corretaje</a><ul><li><a href="compra-renta1.html">Compra</a></li><li><a href="compra-renta1.html">Venta</a></li><li><a href="#">Construcción</a></li></ul></li><li><a href="#">somos</a></li><li><a href="#">amigos</a></li><li><a href="#" class="active">contacto</a><ul><li><a href="nuestras-oficinas.html">Nuestras oficinas</a></li><li><a href="#">¿Buscas inmueble?</a></li><li><a href="#">¿Ofreces inmueble?</a></li><li><a href="#">¿Eres opcionador?</a></li></ul></li></ul></nav></div></header><div class="contenedor"><section id="nuestrasOficinas"><h1>Nuestras Oficinas</h1><p>Nos ponemos a tus órdenes para cualquier tipo de duda o aclaración.</p><article class="border"><h2>Distrito Federal</h2><ul class="telefonos"><li>Teléfonos:</li><li>(55) 5535 - 0121 Oficina</li><li>(55) 5135 - 5794 Fax</li></ul><ul class="email"><li>Email:</li><li>info_df@goodhaus.com.mx</li></ul></article><article><h2>Metepec</h2><ul class="telefonos"><li>Teléfonos:</li><li>(57) 5535 - 0121 Oficina</li><li>(57) 5135 - 5794 Fax</li></ul><ul class="email"><li>Email:</li><li>info_metepec@goodhaus.com.mx</li></ul></article><article class="border"><h2>Cuernavaca</h2><ul class="telefonos"><li>Teléfonos:</li><li>(55) 5535 - 0121 Oficina</li><li>(55) 5135 - 5794 Fax</li></ul><ul class="email"><li>Email:</li><li>info_cuernavaca@goodhaus.com.mx</li></ul></article><article><h2>Los Cabos</h2><ul class="telefonos"><li>Teléfonos:</li><li>(55) 5535 - 0121 Oficina</li><li>(55) 5135 - 5794 Fax</li></ul><ul class="email"><li>Email:</li><li>info_loscabos@goodhaus.com.mx</li></ul></article></section></div><footer><div><p>Good-Haus, 2013. Todos los derechos reservados</p><p> <a href="aviso-privacidad.html">Aviso de privacidad</a></p></div></footer></body><!-- include includes/static--></html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>good-haus</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/styles.css"><!--[if lt IE 8]>
+    <link rel="stylesheet" href="css/styles-ie7.css">
+    <script src="js/lte-ie7.js"></script><![endif]-->
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="js/jcarousellite_1.0.1.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/jcarousellite_1.0.1.min.js"></script>
+    <script type="text/javascript" src="js/all.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- only IE --><!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/jquery-extra-selectors.js"></script>
+    <script src="js/selectivizr-min.js"></script><![endif]-->
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <div class="container"><a id="logo" href="index.html"><img src="img/logo-good-house.png"></a>
+          <div id="filtro"><a href="#" class="active">compra</a><a href="#">renta</a>
+            <div>
+              <div><span id="anyselector">Zona de inmueble</span>
+                <div id="zona">
+                  <ul>
+                    <li>Zona 1</li>
+                    <li>Zona 2</li>
+                    <li>Zona 3</li>
+                    <li>Zona 4</li>
+                    <li>Zona 5</li>
+                    <li>Zona 6</li>
+                    <li>Zona 7</li>
+                    <li>Zona 8</li>
+                    <li>Zona 9</li>
+                    <li>Zona 10</li>
+                  </ul>
+                </div>
+              </div>
+              <div><span id="tiposelector">Tipo de inmueble</span>
+                <div id="tipo">
+                  <ul>
+                    <li>Tipo 1</li>
+                    <li>Tipo 2</li>
+                    <li>Tipo 3</li>
+                    <li>Tipo 4</li>
+                    <li>Tipo 5</li>
+                    <li>Tipo 6</li>
+                    <li>Tipo 7</li>
+                    <li>Tipo 8</li>
+                    <li>Tipo 9</li>
+                    <li>Tipo 10</li>
+                  </ul>
+                </div>
+              </div>
+              <button><i class="icon-search"></i></button>
+            </div>
+          </div>
+          <div id="socialmedia"><a href="#"><i class="icon-linkedin"></i></a><a href="#"><i class="icon-tumblr"></i></a></div>
+          <nav>
+            <ul>
+              <li><a href="#">desarrollos						</a>
+                <ul>
+                  <li><a href="desarrollos.html">Los Olivos</a></li>
+                  <li><a href="desarrollos.html">Periférico</a></li>
+                  <li><a href="desarrollos.html">Convento</a></li>
+                  <li><a href="desarrollos.html">Ermita</a></li>
+                </ul>
+              </li>
+              <li><a href="#">corretaje</a>
+                <ul>
+                  <li><a href="compra-renta1.html">Compra</a></li>
+                  <li><a href="compra-renta1.html">Venta</a></li>
+                  <li><a href="#">Construcción</a></li>
+                </ul>
+              </li>
+              <li><a href="#">somos</a></li>
+              <li><a href="#">amigos</a></li>
+              <li><a href="#" class="active">contacto</a>
+                <ul>
+                  <li><a href="nuestras-oficinas.html">Nuestras oficinas</a></li>
+                  <li><a href="#">¿Buscas inmueble?</a></li>
+                  <li><a href="#">¿Ofreces inmueble?</a></li>
+                  <li><a href="#">¿Eres opcionador?</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div class="contenedor">
+        <section id="nuestrasOficinas">
+          <h1>Nuestras Oficinas</h1>
+          <p>Nos ponemos a tus órdenes para cualquier tipo de duda o aclaración.</p>
+          <article class="border">
+            <h2>Distrito Federal</h2>
+            <ul class="telefonos">
+              <li>Teléfonos:</li>
+              <li>(55) 5535 - 0121 Oficina</li>
+              <li>(55) 5135 - 5794 Fax</li>
+            </ul>
+            <ul class="email">
+              <li>Email:</li>
+              <li>info_df@goodhaus.com.mx</li>
+            </ul>
+          </article>
+          <article>
+            <h2>Metepec</h2>
+            <ul class="telefonos">
+              <li>Teléfonos:</li>
+              <li>(57) 5535 - 0121 Oficina</li>
+              <li>(57) 5135 - 5794 Fax</li>
+            </ul>
+            <ul class="email">
+              <li>Email:</li>
+              <li>info_metepec@goodhaus.com.mx</li>
+            </ul>
+          </article>
+          <article class="border">
+            <h2>Cuernavaca</h2>
+            <ul class="telefonos">
+              <li>Teléfonos:</li>
+              <li>(55) 5535 - 0121 Oficina</li>
+              <li>(55) 5135 - 5794 Fax</li>
+            </ul>
+            <ul class="email">
+              <li>Email:</li>
+              <li>info_cuernavaca@goodhaus.com.mx</li>
+            </ul>
+          </article>
+          <article>
+            <h2>Los Cabos</h2>
+            <ul class="telefonos">
+              <li>Teléfonos:</li>
+              <li>(55) 5535 - 0121 Oficina</li>
+              <li>(55) 5135 - 5794 Fax</li>
+            </ul>
+            <ul class="email">
+              <li>Email:</li>
+              <li>info_loscabos@goodhaus.com.mx</li>
+            </ul>
+          </article>
+        </section>
+      </div>
+      <footer>
+        <div>
+          <p>Good-Haus, 2013. Todos los derechos reservados</p>
+          <p> <a href="aviso-privacidad.html">Aviso de privacidad</a></p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

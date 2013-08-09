@@ -25,33 +25,53 @@ html, body
 
 section
 	padding-bottom: 50px
-    h1
-    	font-family: CaviarDreams
-    	font-size: 25px
-    	boder-bottom: 1px solid #333
-    h2
-        font-size: 18px
-    p
-    	font-size: 13px
-    	line-height: 1.3em
-    li
-        font-size: 13px
-    li.guion
-    	&:before
-    		content: "- "
-    		line-height: 1.4em
-    li.cuadro
-        &:before
-            content: "■ "
-    strong
-        font-family: "OpenSansBold"
+	h1
+		font-family: CaviarDreams
+		font-size: 25px
+		boder-bottom: 1px solid #333
+	h2
+		font-size: 18px
+	p
+		font-size: 13px
+		line-height: 1.3em
+	li
+		font-size: 13px
+	li.guion
+		&:before
+			content: "- "
+			line-height: 1.4em
+	li.cuadro
+		&:before
+			content: "■ "
+	strong
+		font-family: "OpenSansBold"
 
-footer 
-	width: 100%
-	height: 50px
-	position: absolute
-	bottom: 0
-	left: 0
+
+// PORTADA
+a.portada
+	clear: both
+	float: left
+	width: 280px
+	height: 35px
+	background: $primario
+	color: white
+	padding: 3px 20px
+	margin: 5px 0 5px -50px
+	line-height: 29px
+	font-family: OpenSans
+	font-size: 18px
+	text-align: right
+	text-decoration: none
+	box-sizing: border-box
+	-moz-box-sizing: border-box
+	transition-duration: $tiempo
+	border-radius: 0 5px 5px 0
+
+	&:hover
+		transition-property: background, margin
+		transition-duration: $tiempo
+		background: #4C4849
+		margin: 5px 0
 
 
 // utils
@@ -256,55 +276,7 @@ nav
 				ul
 					display: block
 
-// footer
-footer
-	color: white
-	overflow: hidden
-	font-family: OpenSans
-	font-size: 12px
-	text-shadow: 0 0.1em 0.2em #777
-	position: absolute
-	bottom: 0px
-	div
-		width: $contentwidth
-		margin: 0 auto
-	p
-		padding: 10px 0
-		line-height: 50px
-		&:first-of-type
-			float: left
-		&:last-of-type
-			float: right
-			a
-				color: white
-				text-decoration: none
 
-// portada
-#portada
-	a
-		clear: both
-		float: left
-		width: 280px
-		height: 35px
-		background: $primario
-		color: white
-		padding: 3px 20px
-		margin: 5px 0 5px -50px
-		line-height: 29px
-		font-family: OpenSans
-		font-size: 18px
-		text-align: right
-		text-decoration: none
-		box-sizing: border-box
-		-moz-box-sizing: border-box
-		transition-duration: $tiempo
-		border-radius: 0 5px 5px 0
-
-		&:hover
-			transition-property: background, margin
-			transition-duration: $tiempo
-			background: #4C4849
-			margin: 5px 0
 
 // corretaje - compra
 #listado
@@ -491,13 +463,11 @@ div.contenedor
 
 //vars
 $sectionwidth: 1000px
-$sectionheight: 400px
 $fontfamily: "OpenSans"
 $fontsize: 13px
 //section
 section
 	width: $sectionwidth
-	min-height: $sectionheight
 	font-family: "OpenSans"
 	font-size: 12px
 	position: relative
@@ -761,3 +731,30 @@ section
 	background-size: cover
 	width: 100%
 	height: 100%
+
+
+// footer
+footer 
+	width: 100%
+	height: 50px
+	position: absolute
+	bottom: 0
+	left: 0
+	color: white
+	overflow: hidden
+	font-family: OpenSans
+	text-shadow: 0 0.1em 0.2em #777
+	div
+		width: $contentwidth
+		margin: 0 auto
+	p
+		font-size: 14px
+		padding: 10px 0
+		line-height: 50px
+		&:first-of-type
+			float: left
+		&:last-of-type
+			float: right
+			a
+				color: white
+				text-decoration: none

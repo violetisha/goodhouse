@@ -30,7 +30,7 @@ header
 		nav
 			ul
 				li
-					a(href="#", class=(ubi == 'desarrollos' ? 'active' : '')) desarrollos
+					a(href="#", class=(location == 'desarrollos' ? 'active' : '')) desarrollos
 					ul
 						li
 							a(href='desarrollos.html') Los Olivos
@@ -41,7 +41,7 @@ header
 						li
 							a(href='desarrollos.html') Ermita
 				li
-					a(href="#", class=(ubi == 'corretaje' ? 'active' : '')) corretaje
+					a(href="#", class=(location == 'corretaje' ? 'active' : '')) corretaje
 					ul
 						li
 							a(href='compra-renta1.html') Compra
@@ -54,7 +54,7 @@ header
 				li
 					a(href='#') amigos
 				li
-					- if (ubi == "contacto")
+					- if (location == "contacto")
 						a(href='#').active contacto
 					- else
 						a(href='contacto.html') contacto

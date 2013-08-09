@@ -1,11 +1,8 @@
 // vars
 $contentwidth: 1000px
-
 $primario: #E57823
 $secundario: #4C4849
 $hover-menu: #00A2A0
-
-$tiempo: 200ms
 
 // imports
 @import "compass/css3"
@@ -15,25 +12,36 @@ $tiempo: 200ms
 
 // hack shit
 html, body 
-	margin: 0
-	padding: 0
 	height: 100%
-
 #wrapper 
 	min-height: 100%
 	position: relative
 
+// backgrounds
+body
+	background-repeat: no-repeat
+	background-size: cover
+	background-image: url(../img/foto-01.jpg)
+
+
+/* ESTILOS GENÉRICOS */
 section
 	padding-bottom: 50px
+	@extend .container
+	+clearfix
+
 	h1
 		font-family: CaviarDreams
 		font-size: 25px
-		boder-bottom: 1px solid #333
+		border-bottom: 1px solid #333
+		padding-bottom: 10px
+		margin-bottom: 10px
 	h2
 		font-size: 18px
 	p
 		font-size: 13px
 		line-height: 1.3em
+		margin-bottom: 1.3em
 	li
 		font-size: 13px
 	li.guion
@@ -45,77 +53,26 @@ section
 			content: "■ "
 	strong
 		font-family: "OpenSansBold"
+	a
+		color: inherit
+		text-decoration: none
 
-
-// PORTADA
-a.portada
-	clear: both
-	float: left
-	width: 280px
-	height: 35px
-	background: $primario
-	color: white
-	padding: 3px 20px
-	margin: 5px 0 5px -50px
-	line-height: 29px
-	font-family: OpenSans
-	font-size: 18px
-	text-align: right
-	text-decoration: none
-	box-sizing: border-box
-	-moz-box-sizing: border-box
-	transition-duration: $tiempo
-	border-radius: 0 5px 5px 0
-
-	&:hover
-		transition-property: background, margin
-		transition-duration: $tiempo
-		background: #4C4849
-		margin: 5px 0
-
-
-// utils
-.show
-	display: block !important
-
-.contenedor
-	width: $contentwidth
-	margin: 0 auto
-	min-height: 300px
-	@include clearfix
-
-// backgrounds
-html
-	height: 100%
-	width: 100%
-body
-	background-repeat: no-repeat
-	background-size: cover
-	background-image: url(../img/foto-01.jpg)
-
-h1
-	font-family: CaviarDreams
-	font-size: 25px
-
-// header
+/* HEADER */
 header
 	height: 200px
 	background: url(../img/bg_header.png)
 	margin: 0 0 30px 0
 
-	.container
-		width: $contentwidth
+	.contenedor
 		z-index: 1
 		position: relative
-		margin: 0 auto
-		
 
 		#logo
 			float: left
 			display: block
 			height: 163px
 			width: 189px
-			margin: 35px 0 0 20px 
+			margin: 35px 0 0 30px 
 
 		#filtro
 			float: right
@@ -158,7 +115,7 @@ header
 					margin: 0 6px 0 0
 					cursor: pointer
 					line-height: 20px
-					@include single-box-shadow(rgba(0,0,0,.2), 0px, 0px, 5px, 0px)
+					+single-box-shadow(rgba(0,0,0,.2), 0px, 0px, 5px, 0px)
 
 					span
 						display: block
@@ -201,6 +158,7 @@ header
 			.active
 				background: $primario !important
 
+/* SOCIAL MEDIA */
 #socialmedia
 	float: right
 	height: 50px
@@ -217,7 +175,7 @@ header
 			font-size: 16px
 			margin: 0 5px 0 0
 
-// menu
+/* BARRA DE MENU */
 nav
 	position: relative
 	margin: 0 auto
@@ -259,7 +217,7 @@ nav
 				padding: 0 10px
 
 				li					
-					transition-duration: $tiempo
+					+single-transition("all", "200ms")
 
 					a
 						text-decoration: none
@@ -268,14 +226,113 @@ nav
 						line-height: 1em
 						margin: 10px 0
 						display: block
+						+single-transition("all", "200ms")
 
 						&:hover, &.active
-							transition-duration: $tiempo
 							color: $primario 
 			&:hover
 				ul
 					display: block
 
+/* PORTADA */
+a.portada
+	clear: both
+	float: left
+	width: 240px
+	height: 35px
+	background: $primario
+	color: white
+	padding: 0 20px
+	margin: 5px 0 5px -50px
+	line-height: 35px
+	font-size: 18px
+	text-align: right
+	border-radius: 0 5px 5px 0
+	+single-transition(background, 200ms)
+	+single-transition(margin, 200ms)
+
+	&:hover
+		transition-property: background, margin
+		background: #4C4849
+		margin: 5px 0
+
+/* OFICINAS */
+#oficinas
+	article
+		float: left
+		width: 213px
+		margin: 20px 10px 10px
+		padding: 0 10px
+
+		&:nth-of-type(2n)
+			border-left: 1px solid #333
+			padding-left: 20px
+
+		.telefonos
+			color: #666
+			line-height: 1.6em
+		.email
+			color: black
+			line-height: 1.6em
+		ul
+			margin: .5em 0
+
+/* CONTACTO */
+#contacto
+	.row
+		padding: 0 0 15px 0
+		position: relative
+
+	label
+		width: 15%
+		display: block
+		float: left
+		height: 22px
+		line-height: 22px
+		text-align: right
+		padding: 0 10px 0 0
+		box-sizing: border-box
+		&.error
+			width: auto
+			float: none
+			height: 16px
+			position: absolute
+			top: 0
+			right: 4px
+
+	input
+		border: none
+		background-color: #EAEDF4
+		width: 420px
+		height: 22px
+		text-indent: 5px
+		border-radius: 15px 0 0 15px
+
+		&.enviar
+			background-color: #4C4849
+			color: white
+			display: block
+			height: 30px
+			width: 83px
+			border: none
+			border-radius: 15px
+			float: right
+			cursor: pointer
+			margin-right: 10px
+			+box-shadow(-1px -3px 3px rgba(0, 0, 0, .5) inset, 0 2px 3px rgba(255, 255, 255, .8) inset)
+			&:hover
+				background-color: #605E5F	
+
+	textarea
+		border: none
+		font-family: "OpenSans"
+		font-size: 12px
+		background-color: #EAEDF4
+		width: 410px
+		border-radius: 15px 0 0 15px
+		height: 100px
+		padding: 5px 5px
+		resize: none
 
 
 // corretaje - compra
@@ -338,14 +395,14 @@ nav
 						background: #83684D
 
 #scrollinterno
-	@include clearfix
+	+clearfix
 	height: 340px
 	margin: 50px 0 0 0
 
 	
 
 	article
-		@include clearfix
+		+clearfix
 		margin: 0 15px
 		padding: 15px
 		font-family: "OpenSans"
@@ -363,7 +420,7 @@ nav
 			text-decoration: none
 			&:hover >span
 				bottom: 30px
-				transition-duration: $tiempo
+				+single-transition("all", "200ms")
 					
 			>span
 				background: $secundario
@@ -375,7 +432,7 @@ nav
 				text-transform: uppercase
 				overflow: hidden
 				font-size: 12px
-				transition-duration: $tiempo
+				+single-transition("all", "200ms")
 				position: relative
 				bottom: 0px
 				z-index: 99
@@ -396,68 +453,11 @@ nav
 					content: "- "
 					font-size: 13px
 					line-height: 1.4em
-// Nuestras-oficinas
-div.contenedor
-	section#nuestrasOficinas
-		float: right
-		width: 550px
-		height: auto
-		margin: 0 50px 0 0
-		background: white
-		border-radius: 7px
-		padding: 15px 15px 5px 15px
-		font-family: OpenSans
-		font-size: 12px
-		box-sizing: border-box
-		-moz-box-sizing: border-box
-
-		h1
-			font-size: 25px
-			padding: 0 0 15px 0
-			line-height: 20px
-			box-sizing: border-box
-			-moz-box-sizing: border-box
-			border-bottom: 2px solid #666
-		p
-			margin: 15px 0 18px
-		article
-			float: left
-			height: 113px
-			width: 230px
-			margin: 10px 10px 20px 0
-			padding: 0 15px
-			box-sizing: border-box
-			-moz-box-sizing: border-box
-
-			.telefonos
-				color: #666
-				font-size: 12px
-				line-height: 1.4em
-			.email
-				color: black
-				font-size: 12px
-			h2
-				font-size: 18px
-				margin: 0 0 .5em 0
-			ul
-				margin: 0 0 .5em 0
-
-		.border
-			border-right: 2px solid #666
-			margin: 10px
+// N
 
 // Nicescroll rail fix
 .nicescroll-rails
 	border-radius: 5px
-
-
-// Borrar ASAP or Vi'llk'llme
-#prox
-	width: 400px
-	height: 200px
-	overflow: auto
-	margin: 200px auto
-
 
 // ----------------------------------------- choochoo
 
@@ -471,7 +471,7 @@ section
 	font-family: "OpenSans"
 	font-size: 12px
 	position: relative
-	@include clearfix
+	+clearfix
 
 	margin: 0 auto
 
@@ -545,7 +545,7 @@ section
 		top: 33px
 		.logo
 			float: right
-			@include border-radius(8px 8px 0 0)
+			+border-radius(8px 8px 0 0)
 			width: 150px
 			height: 130px
 			padding: 15px 15px 0 15px
@@ -555,11 +555,11 @@ section
 			position: relative
 			top: 35px
 		.contenido
-			@include clearfix
+			+clearfix
 			width: 520px
 			padding: 15px
 			background: white
-			@include border-radius(8px)
+			+border-radius(8px)
 			h1
 				padding: 0px 35px 10px 310px
 				margin-bottom: 10px
@@ -577,7 +577,7 @@ section
 					min-width: 50%
 
 	#specifications
-		@include clearfix
+		+clearfix
 		width: 490px
 		padding: 15px
 		background: white
@@ -585,7 +585,7 @@ section
 		position: relative
 		top: 213px
 		margin-right: 40px
-		@include border-radius(8px)
+		+border-radius(8px)
 		h1
 			padding: 0px 35px 10px 310px
 			margin-bottom: 10px
@@ -602,78 +602,7 @@ section
 				float: left
 				min-width: 50%
 
-	#contacto
-		@extend .whitecard
-		
-		float: right
-		margin: 0px 50px 0 0
-
-		h1
-			font-size: 25px
-			padding: 0 0 15px 0
-			line-height: 20px
-			border-bottom: 2px solid #666
-
-		p
-			@extend .whitep
-
-		form
-			font-family: "OpenSans"
-			font-size: 12px
-			.row
-				padding: 0 0 11px 0
-				position: relative
-
-				label
-					width: 15%
-					display: block
-					float: left
-					height: 22px
-					line-height: 22px
-					text-align: right
-					padding: 0 10px 0 0
-					box-sizing: border-box
-				label.error
-					width: auto
-					float: none
-					height: 16px
-					position: absolute
-					top: 0
-					right: 4px
-
-				input
-					border: none
-					background-color: #EAEDF4
-					width: 420px
-					height: 22px
-					text-indent: 5px
-					border-radius: 15px 0 0 15px
-
-				textarea
-					border: none
-					font-family: "OpenSans"
-					font-size: 12px
-					background-color: #EAEDF4
-					width: 410px
-					border-radius: 15px 0 0 15px
-					height: 100px
-					padding: 5px 5px
-					resize: none
-
-			.enviar
-				background-color: #4C4849
-				color: white
-				display: block
-				height: 30px
-				width: 83px
-				border: none
-				border-radius: 15px
-				float: right
-				cursor: pointer
-				margin-right: 10px
-				@include box-shadow(-1px -3px 3px rgba(0, 0, 0, .5) inset, 0 2px 3px rgba(255, 255, 255, .8) inset)
-				&:hover
-					background-color: #605E5F
+	
 
 	#controls
 		background-color: white
@@ -733,7 +662,27 @@ section
 	height: 100%
 
 
-// footer
+/* CLASES ÚTILES */
+.show
+	display: block !important
+
+.contenedor
+	width: 1000px
+	margin: 0 auto
+
+.caja-blanca
+	background: white
+	border-radius: 7px
+	padding: 15px
+	width: 520px
+	+clearfix
+
+.caja-derecha
+	float: right
+	margin-right: 50px
+
+
+/* FOOTER */
 footer 
 	width: 100%
 	height: 50px

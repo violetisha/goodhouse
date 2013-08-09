@@ -2,15 +2,15 @@
 location = "contacto"
 html
 	include includes/head
-	
+
 	body
 		#wrapper
 			include includes/header
-			div.contenedor
-				section#nuestrasOficinas
+			section
+				#oficinas.caja-blanca.caja-derecha
 					h1 Nuestras Oficinas
 					p Nos ponemos a tus órdenes para cualquier tipo de duda o aclaración.
-					article.border
+					article
 						h2 Distrito Federal
 						ul.telefonos
 							li Teléfonos:
@@ -18,7 +18,8 @@ html
 							li (55) 5135 - 5794 Fax
 						ul.email
 							li Email:
-							li info_df@goodhaus.com.mx
+							li 
+								a(href="#") info_df@goodhaus.com.mx
 					article
 						h2 Metepec
 						ul.telefonos
@@ -27,8 +28,9 @@ html
 							li (57) 5135 - 5794 Fax
 						ul.email
 							li Email:
-							li info_metepec@goodhaus.com.mx
-					article.border
+							li 
+								a(href="#") info_metepec@goodhaus.com.mx
+					article
 						h2 Cuernavaca
 						ul.telefonos
 							li Teléfonos:
@@ -36,7 +38,8 @@ html
 							li (55) 5135 - 5794 Fax
 						ul.email
 							li Email:
-							li info_cuernavaca@goodhaus.com.mx
+							li 
+								a(href="#") info_cuernavaca@goodhaus.com.mx
 					article
 						h2 Los Cabos
 						ul.telefonos
@@ -45,5 +48,6 @@ html
 							li (55) 5135 - 5794 Fax
 						ul.email
 							li Email:
-							li info_loscabos@goodhaus.com.mx
+							li 
+								a(href="#") info_loscabos@goodhaus.com.mx
 			include includes/footer

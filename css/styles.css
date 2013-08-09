@@ -153,8 +153,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 html, body {
-  margin: 0;
-  padding: 0;
   height: 100%;
 }
 
@@ -163,13 +161,24 @@ html, body {
   position: relative;
 }
 
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/foto-01.jpg);
+}
+
+/* ESTILOS GENÉRICOS */
 section {
   padding-bottom: 50px;
+  overflow: hidden;
+  *zoom: 1;
 }
 section h1 {
   font-family: CaviarDreams;
   font-size: 25px;
-  boder-bottom: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 section h2 {
   font-size: 18px;
@@ -177,6 +186,7 @@ section h2 {
 section p {
   font-size: 13px;
   line-height: 1.3em;
+  margin-bottom: 1.3em;
 }
 section li {
   font-size: 13px;
@@ -191,80 +201,29 @@ section li.cuadro:before {
 section strong {
   font-family: "OpenSansBold";
 }
-
-a.portada {
-  clear: both;
-  float: left;
-  width: 280px;
-  height: 35px;
-  background: #e57823;
-  color: white;
-  padding: 3px 20px;
-  margin: 5px 0 5px -50px;
-  line-height: 29px;
-  font-family: OpenSans;
-  font-size: 18px;
-  text-align: right;
+section a {
+  color: inherit;
   text-decoration: none;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  transition-duration: 200ms;
-  border-radius: 0 5px 5px 0;
-}
-a.portada:hover {
-  transition-property: background, margin;
-  transition-duration: 200ms;
-  background: #4c4849;
-  margin: 5px 0;
 }
 
-.show {
-  display: block !important;
-}
-
-.contenedor {
-  width: 1000px;
-  margin: 0 auto;
-  min-height: 300px;
-  overflow: hidden;
-  *zoom: 1;
-}
-
-html {
-  height: 100%;
-  width: 100%;
-}
-
-body {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(../img/foto-01.jpg);
-}
-
-h1 {
-  font-family: CaviarDreams;
-  font-size: 25px;
-}
-
+/* HEADER */
 header {
   height: 200px;
   background: url(../img/bg_header.png);
   margin: 0 0 30px 0;
 }
-header .container {
-  width: 1000px;
+header .contenedor {
   z-index: 1;
   position: relative;
-  margin: 0 auto;
 }
-header .container #logo {
+header .contenedor #logo {
   float: left;
   display: block;
   height: 163px;
   width: 189px;
-  margin: 35px 0 0 20px;
+  margin: 35px 0 0 30px;
 }
-header .container #filtro {
+header .contenedor #filtro {
   float: right;
   margin: 30px 50px 0 0;
   height: 50px;
@@ -274,10 +233,10 @@ header .container #filtro {
   position: relative;
   z-index: 99999;
 }
-header .container #filtro .seleccionado {
+header .contenedor #filtro .seleccionado {
   color: black;
 }
-header .container #filtro > div {
+header .contenedor #filtro > div {
   width: 100%;
   background: #e57823;
   height: 60%;
@@ -287,7 +246,7 @@ header .container #filtro > div {
   -moz-box-sizing: border-box;
   border-radius: 0 7px 7px 7px;
 }
-header .container #filtro > div button {
+header .contenedor #filtro > div button {
   width: 23px;
   color: white;
   padding: 0;
@@ -297,7 +256,7 @@ header .container #filtro > div button {
   background-color: transparent;
   cursor: pointer;
 }
-header .container #filtro > div > div {
+header .contenedor #filtro > div > div {
   float: left;
   width: 238px;
   background: white url(../img/flecha-combo.png) top right no-repeat;
@@ -310,21 +269,21 @@ header .container #filtro > div > div {
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
 }
-header .container #filtro > div > div span {
+header .contenedor #filtro > div > div span {
   display: block;
 }
-header .container #filtro > div > div div {
+header .contenedor #filtro > div > div div {
   max-height: 100px;
   display: none;
 }
-header .container #filtro > div > div div ul {
+header .contenedor #filtro > div > div div ul {
   float: right;
   width: 238px;
   padding: 0 8px 0 0;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
-header .container #filtro > div > div div ul li {
+header .contenedor #filtro > div > div div ul li {
   float: left;
   text-align: left;
   width: 100%;
@@ -334,10 +293,10 @@ header .container #filtro > div > div div ul li {
   -moz-box-sizing: border-box;
   position: relative;
 }
-header .container #filtro > div > div div ul li:hover {
+header .contenedor #filtro > div > div div ul li:hover {
   background: #fae1cd;
 }
-header .container #filtro a {
+header .contenedor #filtro a {
   float: left;
   height: 20px;
   width: 100px;
@@ -348,13 +307,14 @@ header .container #filtro a {
   border-radius: 7px 7px 0 0;
   text-decoration: none;
 }
-header .container #filtro a:hover {
+header .contenedor #filtro a:hover {
   background: #b84e00;
 }
-header .container #filtro .active {
+header .contenedor #filtro .active {
   background: #e57823 !important;
 }
 
+/* SOCIAL MEDIA */
 #socialmedia {
   float: right;
   height: 50px;
@@ -372,6 +332,7 @@ header .container #filtro .active {
   margin: 0 5px 0 0;
 }
 
+/* BARRA DE MENU */
 nav {
   position: relative;
   margin: 0 auto;
@@ -415,7 +376,10 @@ nav > ul > li ul {
   padding: 0 10px;
 }
 nav > ul > li ul li {
-  transition-duration: 200ms;
+  -webkit-transition: "all" "200ms";
+  -moz-transition: "all" "200ms";
+  -o-transition: "all" "200ms";
+  transition: "all" "200ms";
 }
 nav > ul > li ul li a {
   text-decoration: none;
@@ -424,13 +388,129 @@ nav > ul > li ul li a {
   line-height: 1em;
   margin: 10px 0;
   display: block;
+  -webkit-transition: "all" "200ms";
+  -moz-transition: "all" "200ms";
+  -o-transition: "all" "200ms";
+  transition: "all" "200ms";
 }
 nav > ul > li ul li a:hover, nav > ul > li ul li a.active {
-  transition-duration: 200ms;
   color: #e57823;
 }
 nav > ul > li:hover ul {
   display: block;
+}
+
+/* PORTADA */
+a.portada {
+  clear: both;
+  float: left;
+  width: 240px;
+  height: 35px;
+  background: #e57823;
+  color: white;
+  padding: 0 20px;
+  margin: 5px 0 5px -50px;
+  line-height: 35px;
+  font-size: 18px;
+  text-align: right;
+  border-radius: 0 5px 5px 0;
+  -webkit-transition: background 200ms;
+  -moz-transition: background 200ms;
+  -o-transition: background 200ms;
+  transition: background 200ms;
+  -webkit-transition: margin 200ms;
+  -moz-transition: margin 200ms;
+  -o-transition: margin 200ms;
+  transition: margin 200ms;
+}
+a.portada:hover {
+  transition-property: background, margin;
+  background: #4c4849;
+  margin: 5px 0;
+}
+
+/* OFICINAS */
+#oficinas article {
+  float: left;
+  width: 213px;
+  margin: 20px 10px 10px;
+  padding: 0 10px;
+}
+#oficinas article:nth-of-type(2n) {
+  border-left: 1px solid #333333;
+  padding-left: 20px;
+}
+#oficinas article .telefonos {
+  color: #666666;
+  line-height: 1.6em;
+}
+#oficinas article .email {
+  color: black;
+  line-height: 1.6em;
+}
+#oficinas article ul {
+  margin: 0.5em 0;
+}
+
+/* CONTACTO */
+#contacto .row {
+  padding: 0 0 15px 0;
+  position: relative;
+}
+#contacto label {
+  width: 15%;
+  display: block;
+  float: left;
+  height: 22px;
+  line-height: 22px;
+  text-align: right;
+  padding: 0 10px 0 0;
+  box-sizing: border-box;
+}
+#contacto label.error {
+  width: auto;
+  float: none;
+  height: 16px;
+  position: absolute;
+  top: 0;
+  right: 4px;
+}
+#contacto input {
+  border: none;
+  background-color: #eaedf4;
+  width: 420px;
+  height: 22px;
+  text-indent: 5px;
+  border-radius: 15px 0 0 15px;
+}
+#contacto input.enviar {
+  background-color: #4c4849;
+  color: white;
+  display: block;
+  height: 30px;
+  width: 83px;
+  border: none;
+  border-radius: 15px;
+  float: right;
+  cursor: pointer;
+  margin-right: 10px;
+  -webkit-box-shadow: -1px -3px 3px rgba(0, 0, 0, 0.5) inset, 0 2px 3px rgba(255, 255, 255, 0.8) inset;
+  -moz-box-shadow: -1px -3px 3px rgba(0, 0, 0, 0.5) inset, 0 2px 3px rgba(255, 255, 255, 0.8) inset;
+  box-shadow: -1px -3px 3px rgba(0, 0, 0, 0.5) inset, 0 2px 3px rgba(255, 255, 255, 0.8) inset;
+}
+#contacto input.enviar:hover {
+  background-color: #605e5f;
+}
+#contacto textarea {
+  border: none;
+  font-family: "OpenSans";
+  font-size: 12px;
+  background-color: #eaedf4;
+  width: 410px;
+  border-radius: 15px 0 0 15px;
+  height: 100px;
+  padding: 5px 5px;
+  resize: none;
 }
 
 #listado {
@@ -521,7 +601,10 @@ nav > ul > li:hover ul {
 }
 #scrollinterno article a:hover > span {
   bottom: 30px;
-  transition-duration: 200ms;
+  -webkit-transition: "all" "200ms";
+  -moz-transition: "all" "200ms";
+  -o-transition: "all" "200ms";
+  transition: "all" "200ms";
 }
 #scrollinterno article a > span {
   background: #4c4849;
@@ -533,7 +616,10 @@ nav > ul > li:hover ul {
   text-transform: uppercase;
   overflow: hidden;
   font-size: 12px;
-  transition-duration: 200ms;
+  -webkit-transition: "all" "200ms";
+  -moz-transition: "all" "200ms";
+  -o-transition: "all" "200ms";
+  transition: "all" "200ms";
   position: relative;
   bottom: 0px;
   z-index: 99;
@@ -558,69 +644,8 @@ nav > ul > li:hover ul {
   line-height: 1.4em;
 }
 
-div.contenedor section#nuestrasOficinas {
-  float: right;
-  width: 550px;
-  height: auto;
-  margin: 0 50px 0 0;
-  background: white;
-  border-radius: 7px;
-  padding: 15px 15px 5px 15px;
-  font-family: OpenSans;
-  font-size: 12px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-}
-div.contenedor section#nuestrasOficinas h1 {
-  font-size: 25px;
-  padding: 0 0 15px 0;
-  line-height: 20px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  border-bottom: 2px solid #666666;
-}
-div.contenedor section#nuestrasOficinas p {
-  margin: 15px 0 18px;
-}
-div.contenedor section#nuestrasOficinas article {
-  float: left;
-  height: 113px;
-  width: 230px;
-  margin: 10px 10px 20px 0;
-  padding: 0 15px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-}
-div.contenedor section#nuestrasOficinas article .telefonos {
-  color: #666666;
-  font-size: 12px;
-  line-height: 1.4em;
-}
-div.contenedor section#nuestrasOficinas article .email {
-  color: black;
-  font-size: 12px;
-}
-div.contenedor section#nuestrasOficinas article h2 {
-  font-size: 18px;
-  margin: 0 0 0.5em 0;
-}
-div.contenedor section#nuestrasOficinas article ul {
-  margin: 0 0 0.5em 0;
-}
-div.contenedor section#nuestrasOficinas .border {
-  border-right: 2px solid #666666;
-  margin: 10px;
-}
-
 .nicescroll-rails {
   border-radius: 5px;
-}
-
-#prox {
-  width: 400px;
-  height: 200px;
-  overflow: auto;
-  margin: 200px auto;
 }
 
 section {
@@ -632,7 +657,7 @@ section {
   *zoom: 1;
   margin: 0 auto;
 }
-section .whitecard, section #contacto {
+section .whitecard {
   background-color: white;
   min-height: 200px;
   width: 510px;
@@ -646,7 +671,7 @@ section .whiteh1 {
   border-bottom-style: groove;
   min-height: 27px;
 }
-section .whitep, section #contacto p {
+section .whitep {
   padding: 10px 0;
 }
 section #galeria {
@@ -779,79 +804,6 @@ section #specifications ul li {
   float: left;
   min-width: 50%;
 }
-section #contacto {
-  float: right;
-  margin: 0px 50px 0 0;
-}
-section #contacto h1 {
-  font-size: 25px;
-  padding: 0 0 15px 0;
-  line-height: 20px;
-  border-bottom: 2px solid #666666;
-}
-section #contacto form {
-  font-family: "OpenSans";
-  font-size: 12px;
-}
-section #contacto form .row {
-  padding: 0 0 11px 0;
-  position: relative;
-}
-section #contacto form .row label {
-  width: 15%;
-  display: block;
-  float: left;
-  height: 22px;
-  line-height: 22px;
-  text-align: right;
-  padding: 0 10px 0 0;
-  box-sizing: border-box;
-}
-section #contacto form .row label.error {
-  width: auto;
-  float: none;
-  height: 16px;
-  position: absolute;
-  top: 0;
-  right: 4px;
-}
-section #contacto form .row input {
-  border: none;
-  background-color: #eaedf4;
-  width: 420px;
-  height: 22px;
-  text-indent: 5px;
-  border-radius: 15px 0 0 15px;
-}
-section #contacto form .row textarea {
-  border: none;
-  font-family: "OpenSans";
-  font-size: 12px;
-  background-color: #eaedf4;
-  width: 410px;
-  border-radius: 15px 0 0 15px;
-  height: 100px;
-  padding: 5px 5px;
-  resize: none;
-}
-section #contacto form .enviar {
-  background-color: #4c4849;
-  color: white;
-  display: block;
-  height: 30px;
-  width: 83px;
-  border: none;
-  border-radius: 15px;
-  float: right;
-  cursor: pointer;
-  margin-right: 10px;
-  -webkit-box-shadow: -1px -3px 3px rgba(0, 0, 0, 0.5) inset, 0 2px 3px rgba(255, 255, 255, 0.8) inset;
-  -moz-box-shadow: -1px -3px 3px rgba(0, 0, 0, 0.5) inset, 0 2px 3px rgba(255, 255, 255, 0.8) inset;
-  box-shadow: -1px -3px 3px rgba(0, 0, 0, 0.5) inset, 0 2px 3px rgba(255, 255, 255, 0.8) inset;
-}
-section #contacto form .enviar:hover {
-  background-color: #605e5f;
-}
 section #controls {
   background-color: white;
   height: 32px;
@@ -913,6 +865,31 @@ section #controls #go {
   height: 100%;
 }
 
+/* CLASES ÚTILES */
+.show {
+  display: block !important;
+}
+
+.contenedor {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.caja-blanca {
+  background: white;
+  border-radius: 7px;
+  padding: 15px;
+  width: 520px;
+  overflow: hidden;
+  *zoom: 1;
+}
+
+.caja-derecha {
+  float: right;
+  margin-right: 50px;
+}
+
+/* FOOTER */
 footer {
   width: 100%;
   height: 50px;

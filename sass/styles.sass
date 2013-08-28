@@ -1,8 +1,8 @@
-// vars
-$contentwidth: 1000px
 $primario: #E57823
 $secundario: #4C4849
 $hover-menu: #00A2A0
+$fontfamily: "OpenSans"
+$fontsize: 13px
 
 // imports
 @import "compass/css3"
@@ -11,8 +11,10 @@ $hover-menu: #00A2A0
 @import "fonts"
 
 // hack shit
+
 html, body 
 	height: 100%
+	font-family: "OpenSans"
 #wrapper 
 	min-height: 100%
 	position: relative
@@ -21,17 +23,17 @@ html, body
 body
 	background-repeat: no-repeat
 	background-size: cover
-	background-image: url(../img/foto-01.jpg)
+	background-image: url(../imagenes/foto-01.jpg)
 
 
 /* ESTILOS GENÉRICOS */
 section
 	padding-bottom: 50px
-	@extend .container
+	@extend .contenedor
 	+clearfix
 
 	h1
-		font-family: CaviarDreams
+		font-family: "CaviarDreams"
 		font-size: 25px
 		border-bottom: 1px solid #333
 		padding-bottom: 10px
@@ -60,10 +62,11 @@ section
 /* HEADER */
 header
 	height: 200px
-	background: url(../img/bg_header.png)
+	background: url(../imagenes/bg_header.png)
 	margin: 0 0 30px 0
 
-	.contenedor
+	>div
+		@extend .contenedor
 		z-index: 1
 		position: relative
 
@@ -109,7 +112,7 @@ header
 				>div
 					float: left
 					width: 238px
-					background: white url(../img/flecha-combo.png) top right no-repeat
+					background: white url(../imagenes/flecha-combo.png) top right no-repeat
 					color: #AAA
 					padding: 0 3px
 					margin: 0 6px 0 0
@@ -337,23 +340,11 @@ a.portada
 
 // corretaje - compra
 #listado
-	width: 700px
-	height: 400px
-	margin: 0 auto
-	background: white
-	border-radius: 7px
-
-	h1
-		float: left
-		font-size: 25px
-		padding: 15px
-		font-family: "CaviarDreams"
-		font-size: 25px
-		line-height: 20px
-		box-sizing: border-box
-		-moz-box-sizing: border-box
+	position: relative
 	#ordenacion
-		float: right
+		position: absolute
+		top: 0px
+		right: 0px
 		height: auto
 		padding: 15px
 		font-family: "OpenSans"
@@ -363,12 +354,12 @@ a.portada
 
 		.deshabilitado
 			color: #746E62
-			background: $primario url(../img/flecha-combo-02-des.png) top right no-repeat
+			background: $primario url(../imagenes/flecha-combo-02-des.png) top right no-repeat
 		>div
 			float: left
 			height: 20px
 			width: 100px
-			background: $primario url(../img/flecha-combo-02.png) top right no-repeat
+			background: $primario url(../imagenes/flecha-combo-02.png) top right no-repeat
 			color: white
 			cursor: pointer
 			box-sizing: border-box
@@ -397,7 +388,7 @@ a.portada
 #scrollinterno
 	+clearfix
 	height: 340px
-	margin: 50px 0 0 0
+	//margin: 50px 0 0 0
 
 	
 
@@ -406,11 +397,7 @@ a.portada
 		margin: 0 15px
 		padding: 15px
 		font-family: "OpenSans"
-		border-bottom: 2px solid #666
-
-		&:first-of-type
-			border-top: 2px solid #666
-
+		border-bottom: 1px solid #333
 	
 		a
 			float: left
@@ -420,7 +407,6 @@ a.portada
 			text-decoration: none
 			&:hover >span
 				bottom: 30px
-				+single-transition("all", "200ms")
 					
 			>span
 				background: $secundario
@@ -461,19 +447,8 @@ a.portada
 
 // ----------------------------------------- choochoo
 
-//vars
-$sectionwidth: 1000px
-$fontfamily: "OpenSans"
-$fontsize: 13px
 //section
 section
-	width: $sectionwidth
-	font-family: "OpenSans"
-	font-size: 12px
-	position: relative
-	+clearfix
-
-	margin: 0 auto
 
 	//common styles
 	.whitecard
@@ -526,7 +501,7 @@ section
 
 			#prev
 				@extend .control
-				background: url(../img/flecha_izq.png) no-repeat right 15px
+				background: url(../imagenes/flecha_izq.png) no-repeat right 15px
 			#carousel
 				float: left
 
@@ -534,7 +509,7 @@ section
 					margin: 0 5px
 			#next
 				@extend .control
-				background: url(../img/flecha_der.png) no-repeat left 15px
+				background: url(../imagenes/flecha_der.png) no-repeat left 15px
 
 	#desarrollos
 		position: relative
@@ -583,16 +558,11 @@ section
 		background: white
 		float: right
 		position: relative
-		top: 213px
+		top: 175px
 		margin-right: 40px
 		+border-radius(8px)
 		h1
-			padding: 0px 35px 10px 310px
-			margin-bottom: 10px
-			text-align: center
-			border-bottom: 1px solid #333
-		p
-			line-height: 1.3em
+			text-align: right
 		ul
 			list-style: square inside
 			padding: 0 0 0 12px
@@ -612,8 +582,8 @@ section
 		text-align: center
 		line-height: 32px
 		float: left
-		position: absolute
-		bottom: 0px
+		position: relative
+		top: 375px
 		margin-left: 40px
 
 		#placeslist
@@ -631,7 +601,7 @@ section
 			float: left
 			background-color: transparent
 			cursor: pointer
-			background: url(../img/flechas.png) center left no-repeat
+			background: url(../imagenes/flechas.png) center left no-repeat
 			margin-left: 5px
 
 		#go
@@ -641,7 +611,7 @@ section
 			background-color: transparent
 			cursor: pointer
 			margin-right: 5px
-			background: url(../img/flechas.png) center right no-repeat
+			background: url(../imagenes/flechas.png) center right no-repeat
 
 #mask
 	position: absolute
@@ -681,6 +651,10 @@ section
 	float: right
 	margin-right: 50px
 
+.caja-central
+	margin: 0 auto
+	width: 700px
+	height: 400px
 
 /* FOOTER */
 footer 
@@ -693,17 +667,16 @@ footer
 	overflow: hidden
 	font-family: OpenSans
 	text-shadow: 0 0.1em 0.2em #777
-	div
-		width: $contentwidth
-		margin: 0 auto
-	p
-		font-size: 14px
-		padding: 10px 0
-		line-height: 50px
-		&:first-of-type
-			float: left
-		&:last-of-type
-			float: right
-			a
-				color: white
-				text-decoration: none
+	>div
+		@extend .contenedor
+		p
+			font-size: 14px
+			padding: 10px 0
+			line-height: 50px
+			&:first-of-type
+				float: left
+			&:last-of-type
+				float: right
+				a
+					color: white
+					text-decoration: none

@@ -1,0 +1,32 @@
+/* TEAM */
+                            
+Nombre: Violeta Rosales
+Cargo: Front-End Developer
+Site: http://www.violetarosales.com
+Twitter: @violetisha
+Location: Ciudad de México
+
+Nombre: Fernando Magrosoto Vásquez
+Cargo: Director de Producción
+Site: http://www.digitae.com.mx | fmagrosoto@digitae.com.mx
+Twitter: @fmagrosoto
+Location: Ciudad de México
+
+Nombre: Norberto Prieto Peña
+Cargo: Director Comercial
+Site: http://www.digitae.com.mx | norberto@grupo-quantum.com
+Twitter: @norberto_prieto                   
+Location: Ciudad de México
+
+Nombre: Leopoldo Limón
+Cargo: Director de Arte
+Site: http://www.digitae.com.mx | polo@grupo-quantum.com
+Twitter: @tacubayo               
+Location: Ciudad de México
+                         
+/* SITE */
+                            
+Last update: 2013/08/18
+Standards: HTML5, CSS3
+Components: jQuery
+Software: Codificado a mano, en Sublime Text 2. Preprocesado con JADE, SASS Y COMPASS.

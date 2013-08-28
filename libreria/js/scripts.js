@@ -58,6 +58,7 @@ function assignEvents() {
 		$(".deshabilitado").removeClass("deshabilitado");
 		
 		$("#ordenacion>div span").last().click(dropDown);
+		
 		//Filtros - tipos
 		$("#criterioOp li").click(function(){
 			$("#criterioSeleccionado").html($(this).html());

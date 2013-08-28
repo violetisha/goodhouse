@@ -1,0 +1,6 @@
+User-agent: *
+Disallow:
+Disallow: /css/
+Disallow: /imagenes/
+Disallow: /libreria/
+Disallow: /pdf/

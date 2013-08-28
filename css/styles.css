@@ -154,6 +154,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 html, body {
   height: 100%;
+  font-family: "OpenSans";
 }
 
 #wrapper {
@@ -164,7 +165,7 @@ html, body {
 body {
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../img/foto-01.jpg);
+  background-image: url(../imagenes/foto-01.jpg);
 }
 
 /* ESTILOS GENÉRICOS */
@@ -174,7 +175,7 @@ section {
   *zoom: 1;
 }
 section h1 {
-  font-family: CaviarDreams;
+  font-family: "CaviarDreams";
   font-size: 25px;
   border-bottom: 1px solid #333333;
   padding-bottom: 10px;
@@ -209,21 +210,21 @@ section a {
 /* HEADER */
 header {
   height: 200px;
-  background: url(../img/bg_header.png);
+  background: url(../imagenes/bg_header.png);
   margin: 0 0 30px 0;
 }
-header .contenedor {
+header > div {
   z-index: 1;
   position: relative;
 }
-header .contenedor #logo {
+header > div #logo {
   float: left;
   display: block;
   height: 163px;
   width: 189px;
   margin: 35px 0 0 30px;
 }
-header .contenedor #filtro {
+header > div #filtro {
   float: right;
   margin: 30px 50px 0 0;
   height: 50px;
@@ -233,10 +234,10 @@ header .contenedor #filtro {
   position: relative;
   z-index: 99999;
 }
-header .contenedor #filtro .seleccionado {
+header > div #filtro .seleccionado {
   color: black;
 }
-header .contenedor #filtro > div {
+header > div #filtro > div {
   width: 100%;
   background: #e57823;
   height: 60%;
@@ -246,7 +247,7 @@ header .contenedor #filtro > div {
   -moz-box-sizing: border-box;
   border-radius: 0 7px 7px 7px;
 }
-header .contenedor #filtro > div button {
+header > div #filtro > div button {
   width: 23px;
   color: white;
   padding: 0;
@@ -256,10 +257,10 @@ header .contenedor #filtro > div button {
   background-color: transparent;
   cursor: pointer;
 }
-header .contenedor #filtro > div > div {
+header > div #filtro > div > div {
   float: left;
   width: 238px;
-  background: white url(../img/flecha-combo.png) top right no-repeat;
+  background: white url(../imagenes/flecha-combo.png) top right no-repeat;
   color: #aaaaaa;
   padding: 0 3px;
   margin: 0 6px 0 0;
@@ -269,21 +270,21 @@ header .contenedor #filtro > div > div {
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
 }
-header .contenedor #filtro > div > div span {
+header > div #filtro > div > div span {
   display: block;
 }
-header .contenedor #filtro > div > div div {
+header > div #filtro > div > div div {
   max-height: 100px;
   display: none;
 }
-header .contenedor #filtro > div > div div ul {
+header > div #filtro > div > div div ul {
   float: right;
   width: 238px;
   padding: 0 8px 0 0;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
-header .contenedor #filtro > div > div div ul li {
+header > div #filtro > div > div div ul li {
   float: left;
   text-align: left;
   width: 100%;
@@ -293,10 +294,10 @@ header .contenedor #filtro > div > div div ul li {
   -moz-box-sizing: border-box;
   position: relative;
 }
-header .contenedor #filtro > div > div div ul li:hover {
+header > div #filtro > div > div div ul li:hover {
   background: #fae1cd;
 }
-header .contenedor #filtro a {
+header > div #filtro a {
   float: left;
   height: 20px;
   width: 100px;
@@ -307,10 +308,10 @@ header .contenedor #filtro a {
   border-radius: 7px 7px 0 0;
   text-decoration: none;
 }
-header .contenedor #filtro a:hover {
+header > div #filtro a:hover {
   background: #b84e00;
 }
-header .contenedor #filtro .active {
+header > div #filtro .active {
   background: #e57823 !important;
 }
 
@@ -514,24 +515,12 @@ a.portada:hover {
 }
 
 #listado {
-  width: 700px;
-  height: 400px;
-  margin: 0 auto;
-  background: white;
-  border-radius: 7px;
-}
-#listado h1 {
-  float: left;
-  font-size: 25px;
-  padding: 15px;
-  font-family: "CaviarDreams";
-  font-size: 25px;
-  line-height: 20px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
+  position: relative;
 }
 #listado #ordenacion {
-  float: right;
+  position: absolute;
+  top: 0px;
+  right: 0px;
   height: auto;
   padding: 15px;
   font-family: "OpenSans";
@@ -541,13 +530,13 @@ a.portada:hover {
 }
 #listado #ordenacion .deshabilitado {
   color: #746e62;
-  background: #e57823 url(../img/flecha-combo-02-des.png) top right no-repeat;
+  background: #e57823 url(../imagenes/flecha-combo-02-des.png) top right no-repeat;
 }
 #listado #ordenacion > div {
   float: left;
   height: 20px;
   width: 100px;
-  background: #e57823 url(../img/flecha-combo-02.png) top right no-repeat;
+  background: #e57823 url(../imagenes/flecha-combo-02.png) top right no-repeat;
   color: white;
   cursor: pointer;
   box-sizing: border-box;
@@ -579,7 +568,6 @@ a.portada:hover {
   overflow: hidden;
   *zoom: 1;
   height: 340px;
-  margin: 50px 0 0 0;
 }
 #scrollinterno article {
   overflow: hidden;
@@ -587,10 +575,7 @@ a.portada:hover {
   margin: 0 15px;
   padding: 15px;
   font-family: "OpenSans";
-  border-bottom: 2px solid #666666;
-}
-#scrollinterno article:first-of-type {
-  border-top: 2px solid #666666;
+  border-bottom: 1px solid #333333;
 }
 #scrollinterno article a {
   float: left;
@@ -601,10 +586,6 @@ a.portada:hover {
 }
 #scrollinterno article a:hover > span {
   bottom: 30px;
-  -webkit-transition: "all" "200ms";
-  -moz-transition: "all" "200ms";
-  -o-transition: "all" "200ms";
-  transition: "all" "200ms";
 }
 #scrollinterno article a > span {
   background: #4c4849;
@@ -648,15 +629,6 @@ a.portada:hover {
   border-radius: 5px;
 }
 
-section {
-  width: 1000px;
-  font-family: "OpenSans";
-  font-size: 12px;
-  position: relative;
-  overflow: hidden;
-  *zoom: 1;
-  margin: 0 auto;
-}
 section .whitecard {
   background-color: white;
   min-height: 200px;
@@ -705,7 +677,7 @@ section #galeria #slider .control, section #galeria #slider #prev, section #gale
   cursor: pointer;
 }
 section #galeria #slider #prev {
-  background: url(../img/flecha_izq.png) no-repeat right 15px;
+  background: url(../imagenes/flecha_izq.png) no-repeat right 15px;
 }
 section #galeria #slider #carousel {
   float: left;
@@ -714,7 +686,7 @@ section #galeria #slider #carousel img {
   margin: 0 5px;
 }
 section #galeria #slider #next {
-  background: url(../img/flecha_der.png) no-repeat left 15px;
+  background: url(../imagenes/flecha_der.png) no-repeat left 15px;
 }
 section #desarrollos {
   position: relative;
@@ -778,7 +750,7 @@ section #specifications {
   background: white;
   float: right;
   position: relative;
-  top: 213px;
+  top: 175px;
   margin-right: 40px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -787,13 +759,7 @@ section #specifications {
   border-radius: 8px;
 }
 section #specifications h1 {
-  padding: 0px 35px 10px 310px;
-  margin-bottom: 10px;
-  text-align: center;
-  border-bottom: 1px solid #333333;
-}
-section #specifications p {
-  line-height: 1.3em;
+  text-align: right;
 }
 section #specifications ul {
   list-style: square inside;
@@ -812,8 +778,8 @@ section #controls {
   text-align: center;
   line-height: 32px;
   float: left;
-  position: absolute;
-  bottom: 0px;
+  position: relative;
+  top: 375px;
   margin-left: 40px;
 }
 section #controls #placeslist {
@@ -831,7 +797,7 @@ section #controls #back {
   float: left;
   background-color: transparent;
   cursor: pointer;
-  background: url(../img/flechas.png) center left no-repeat;
+  background: url(../imagenes/flechas.png) center left no-repeat;
   margin-left: 5px;
 }
 section #controls #go {
@@ -841,7 +807,7 @@ section #controls #go {
   background-color: transparent;
   cursor: pointer;
   margin-right: 5px;
-  background: url(../img/flechas.png) center right no-repeat;
+  background: url(../imagenes/flechas.png) center right no-repeat;
 }
 
 #mask {
@@ -870,7 +836,7 @@ section #controls #go {
   display: block !important;
 }
 
-.contenedor {
+.contenedor, section, header > div, footer > div {
   width: 1000px;
   margin: 0 auto;
 }
@@ -889,6 +855,12 @@ section #controls #go {
   margin-right: 50px;
 }
 
+.caja-central {
+  margin: 0 auto;
+  width: 700px;
+  height: 400px;
+}
+
 /* FOOTER */
 footer {
   width: 100%;
@@ -901,22 +873,18 @@ footer {
   font-family: OpenSans;
   text-shadow: 0 0.1em 0.2em #777777;
 }
-footer div {
-  width: 1000px;
-  margin: 0 auto;
-}
-footer p {
+footer > div p {
   font-size: 14px;
   padding: 10px 0;
   line-height: 50px;
 }
-footer p:first-of-type {
+footer > div p:first-of-type {
   float: left;
 }
-footer p:last-of-type {
+footer > div p:last-of-type {
   float: right;
 }
-footer p:last-of-type a {
+footer > div p:last-of-type a {
   color: white;
   text-decoration: none;
 }
